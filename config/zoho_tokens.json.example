@@ -1,0 +1,7 @@
+{
+  "access_token": "1.7.b",
+  "refresh_token": "1.4.d",
+  "api_domain": "https://www.zohoapis.eu",
+  "token_type": "Bearer",
+  "expires_in": 3600
+}

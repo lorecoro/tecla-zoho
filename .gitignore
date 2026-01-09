@@ -1,0 +1,11 @@
+node_modules
+
+config/zoho_tokens.json
+config/zoho_calendars.json
+
+daily-curl.sh
+
+.env
+.vscode
+.stfolder
+.history

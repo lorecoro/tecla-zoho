@@ -1,0 +1,14 @@
+{
+  "name": "tecla-zoho",
+  "version": "26.0.0",
+  "type": "module",
+  "description": "Zoho calendar interface",
+  "main": "index.js",
+  "author": "Lorenzo Coronati",
+  "private": true,
+  "dependencies": {
+    "dotenv": "^16.3.1",
+    "express": "^5.2.1",
+    "node-fetch": "^3.3.2"
+  }
+}
