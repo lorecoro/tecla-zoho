@@ -1,4 +1,4 @@
-exports.basicAuth = (req) => {
+export function basicAuth(req) {
     // check for basic auth header
     if (!req.headers.authorization || req.headers.authorization.indexOf('Basic ') === -1) {
         console.log('Missing Authorization Header')

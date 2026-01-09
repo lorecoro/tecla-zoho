@@ -1,7 +1,7 @@
 import express from 'express'
 import 'dotenv/config'
 const app = express()
-const port = process.env.PORT || 3002
+const port = process.env.PORT || 3003
 import { basicAuth } from './auth.js'
 import { authorizeUrl, requestToken } from './zohoauth.js'
 import { createEvent } from './api.js'
