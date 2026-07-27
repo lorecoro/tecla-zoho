@@ -1,0 +1,28 @@
+name: SSH into VPS and deploy
+
+on:
+  workflow_dispatch:
+    inputs:
+      environment:
+        description: "Target environment:"
+        required: true
+        default: "cx33"
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    environment: ${{ github.event.inputs.environment }}
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v5
+
+      - name: Deploy via SSH
+        uses: appleboy/ssh-action@v1.0.3
+        with:
+          host: ${{ secrets.VPS_HOST }}
+          username: ${{ secrets.VPS_USER }}
+          key: ${{ secrets.VPS_SSH_KEY }}
+          port: ${{ secrets.VPS_PORT }}
+          script: |
+            /srv/nodeapp/tecla-zoho/deploy.sh
